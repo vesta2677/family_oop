@@ -1,0 +1,2 @@
+class AlphanumValidationError(Exception):
+    pass
