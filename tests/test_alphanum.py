@@ -29,3 +29,9 @@ class TestAlphanum(TestCase):
     def test_get_default_language(self):
         an = AlphaNum()
         self.assertEqual(an.get_locale(), 'en-us')
+
+    def test_get_french_language(self):
+        an = AlphaNum('fr-fr')
+        fr = an.get_french_alphabet()
+        self.assertIsNotNone(fr)
+        self.assertEqual(an.get_locale(), 'fr-fr')

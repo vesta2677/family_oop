@@ -32,7 +32,15 @@ class AlphaNum():
         return self.locale_code
 
     def get_french_alphabet(self):
-        raise Exception('French alphabet not implemented')
+        fr_alphabet = list(string.ascii_lowercase)
+        fr_alphabet[1:1] = ['\u00E0','\u00E1','\u00E4']
+        fr_alphabet[6:6]= ['\u00E7']
+        fr_alphabet[9:9] = ['\u00E8','\u00E9','\u00EA']
+        fr_alphabet[15:15] = ['\u00EE', '\u00EF']
+        fr_alphabet[24:24] = ['\u00F4', '\u0153']
+        fr_alphabet[32:32] = ['\u00F9', '\u00FC']
+        fr_alphabet[38:38] = ['\u00FF']
+        return fr_alphabet
 
     def get_german_alphabet(self):
         raise Exception('German alphabet not implemented')
